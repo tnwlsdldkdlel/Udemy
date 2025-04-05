@@ -1,8 +1,8 @@
 import React from "react";
 
-function Player({ name, symbol, index, onEdit }) {
+function Player({ id, name, symbol, onEdit, activePlayer }) {
   const [isEditing, setIsEditing] = React.useState(false);
-  const [player, setPlayer] = React.useState({ name, symbol, index });
+  const [player, setPlayer] = React.useState({ id, name, symbol });
 
   const handleEdit = () => {
     if (isEditing) {
@@ -16,7 +16,7 @@ function Player({ name, symbol, index, onEdit }) {
   };
 
   return (
-    <li>
+    <li className={activePlayer === player.symbol ? "active" : undefined}>
       <span className="player">
         {isEditing ? (
           <input
