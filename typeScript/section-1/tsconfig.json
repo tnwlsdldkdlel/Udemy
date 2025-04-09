@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 자바스크립트 버전
+    "module": "ESNext", // 모듈 시스템
+    "outDir": "dist", // 컴파일된 파일이 저장될 경로
+    "strict": false, // 모든 타입 체크 활성
+    "moduleDetection": "force" // 모듈 감지 방법 force: export, import 자동사용으로 개별 모듈로 인식
+  },
+  "include": ["src"] // 컴파일 적용 경로
+}

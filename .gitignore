@@ -1,2 +1,9 @@
 next/project-1/node_modules/*
 next/project-2/node_modules/*
+next/project-1/package-lock.json
+next/project-2/package-lock.json
+
+typeScript/section-1/node_modules/*
+typeScript/section-1/package-lock.json
+typeScript/section-2/package-lock.json
+typeScript/section-1/dist/*
