@@ -7,3 +7,5 @@ typeScript/section-1/node_modules/*
 typeScript/section-1/package-lock.json
 typeScript/section-2/package-lock.json
 typeScript/section-1/dist/*
+/node_modules
+package-lock.json

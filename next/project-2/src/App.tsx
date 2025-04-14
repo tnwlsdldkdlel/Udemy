@@ -1,10 +1,21 @@
+import { useState } from "react";
+import MainHeader from "./components/MainHeader";
 import PostList from "./components/PostList";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <main>
-      <PostList />
-    </main>
+    <>
+      <MainHeader onCreatePost={handleModal}></MainHeader>
+      <main>
+        <PostList isOpen={isOpen} onModal={handleModal} />
+      </main>
+    </>
   );
 }
 

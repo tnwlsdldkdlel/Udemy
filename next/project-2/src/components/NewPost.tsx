@@ -10,12 +10,14 @@ interface NewPostProps {
   onPost: (
     event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
+  onSubmit: (event: React.FormEvent) => void;
+  onCancel: () => void;
 }
 
 // React.FC : 컴포넌트의 타입을 정의하는 제네릭 타입 -> children을 포함한 props를 자동으로 추가해준다.
 // 요즘엔 React.FC를 사용하지 않는 추세
 // htmlFor : 해당 id의 label을 클릭하면 해당 id를 가진 input이 focus된다.
-const NewPost = ({ post, onPost }: NewPostProps) => {
+const NewPost = ({ post, onPost, onSubmit, onCancel }: NewPostProps) => {
   return (
     <form className={classes.form}>
       <p>
@@ -37,6 +39,14 @@ const NewPost = ({ post, onPost }: NewPostProps) => {
           required
           onChange={onPost}
         />
+      </p>
+      <p className={classes.actions}>
+        <button type="submit" className={classes.button} onClick={onSubmit}>
+          Submit
+        </button>
+        <button type="button" className={classes.button} onClick={onCancel}>
+          Cancel
+        </button>
       </p>
     </form>
   );
